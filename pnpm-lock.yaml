@@ -18,7 +18,7 @@ dependencies:
     specifier: ^21.6.0
     version: 21.6.1(@adonisjs/assembler@7.8.2)(@adonisjs/core@6.17.2)(@vinejs/vine@3.0.1)(luxon@3.6.1)(pg@8.14.1)
   '@vinejs/vine':
-    specifier: ^3.0.0
+    specifier: ^3.0.1
     version: 3.0.1
   luxon:
     specifier: ^3.6.1
