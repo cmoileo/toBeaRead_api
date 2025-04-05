@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  toBeRead_db:
+    image: postgres:latest
+    container_name: toBeRead_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - toBeRead_data:/var/lib/postgresql/data
+
+volumes:
+  toBeRead_data:
