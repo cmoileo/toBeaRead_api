@@ -65,4 +65,18 @@ export default class AuthController {
       })
     }
   }
+
+  public async logout({ auth, response }: HttpContext): Promise<void> {
+    try {
+      await auth.use('api').invalidateToken()
+
+      return response.status(200).json({
+        message: 'Logged out successfully',
+      })
+    } catch (error) {
+      return response.status(500).json({
+        message: 'An error occurred while logging out',
+      })
+    }
+  }
 }
